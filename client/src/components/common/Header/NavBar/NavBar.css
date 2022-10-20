@@ -1,0 +1,16 @@
+.nav-link {
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+    margin: 10px;
+    padding-bottom: 10px;
+    transition: color 0.2s;
+}
+
+.nav-link:hover {
+    cursor: pointer;
+    color: darkviolet;
+    /*border-bottom: 1px solid darkviolet;*/
+}
+
+

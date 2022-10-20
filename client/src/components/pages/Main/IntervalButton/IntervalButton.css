@@ -1,0 +1,29 @@
+.interval-btn {
+    color: black;
+    padding: 10px 20px;
+    background-color: #ccc;
+    border: none;
+    border-radius: 10px;
+}
+
+.interval-btn:hover {
+    background-color: #c3c3c3;
+    cursor: pointer;
+}
+
+.interval-btn_selected {
+    color: #fff;
+    padding: 10px 20px;
+    background-color: darkviolet;
+    border: none;
+    border-radius: 10px;
+}
+
+.interval-btn_selected:hover {
+    background-color: darkmagenta;
+    cursor: pointer;
+}
+
+
+
+

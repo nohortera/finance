@@ -1,0 +1,46 @@
+
+/*todo: change all selectors to classes or use this file as style object*/
+.main-wrapper {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.table-wrapper {
+    width: 700px;
+    padding: 50px;
+    border: 1px solid #e8eaed;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: #e8eaed 0 2px 10px;
+}
+
+h2 {
+    font-weight: 400;
+    margin: 0 0 20px;
+    text-align: center;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+tr, td, tbody {
+    border-top: 1px solid #e8eaed;
+    border-collapse: collapse;
+    padding: 10px;
+}
+
+.th-percent {
+    padding-left: 45px;
+}
+
+.intervals-wrapper {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}

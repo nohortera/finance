@@ -1,0 +1,14 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    border-bottom: 1px solid #e8eaed;
+    box-shadow: #e8eaed 0 0 10px 0;
+    padding: 20px 100px;
+}
+
+.title {
+    color: darkviolet;
+    font-size: 46px;
+}
