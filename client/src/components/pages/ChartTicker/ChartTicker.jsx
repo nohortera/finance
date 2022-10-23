@@ -24,7 +24,7 @@ const ChartTicker = () => {
     })
 
     return (
-        <div className='chart-wrapper'>
+        <div className='chart-wrapper' data-testid='chart-page'>
             <canvas ref={canvasRef}></canvas>
         </div>
     );

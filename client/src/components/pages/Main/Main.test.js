@@ -1,38 +1,27 @@
-import {render, screen} from "@testing-library/react";
-import Main from "./Main";
-import {Provider} from "react-redux";
-import {setupStore} from "../../../store";
+import {screen} from "@testing-library/react";
+import {renderSetup} from "../../../tests/helpers/renderSetup.helper";
 
 
-describe('Main page FE test', () => {
+describe('Main test', () => {
+
     test('render table', () => {
-        render(
-            <Provider store={setupStore()}>
-                <Main />
-            </Provider>
-        )
+        renderSetup()
+
         const table = screen.getByTestId('table')
         expect(table).toBeInTheDocument()
     })
 
     test('render rows', () => {
-        render(
-            <Provider store={setupStore()}>
-                <Main />
-            </Provider>
-        )
+        renderSetup()
+
         const rows = screen.getAllByTestId('table-row')
         expect(rows.length).toBe(6)
     })
 
     test('render heading', () => {
-        render(
-            <Provider store={setupStore()}>
-                <Main />
-            </Provider>
-        )
-        const heading = screen.getByText(/All stocks/i)
+        renderSetup()
+
+        const heading = screen.getByText(/Dashboard/i)
         expect(heading).toBeInTheDocument()
     })
-
 })

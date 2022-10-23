@@ -1,12 +1,12 @@
 import React from 'react';
 import './Header.css'
-import NavBar from "./NavBar/NavBar";
+import Navbar from "./Navbar/Navbar";
 
 const Header = () => {
     return (
         <header className='header' data-testid='header'>
             <h1 className='title'>Stocks Inc.</h1>
-            <NavBar />
+            <Navbar />
         </header>
     );
 };

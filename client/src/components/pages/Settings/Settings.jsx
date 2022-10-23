@@ -7,7 +7,7 @@ const Settings = () => {
     const tickers = useSelector(state => state.tickers.settings)
 
     return (
-        <div className='settings-wrapper'>
+        <div className='settings-wrapper' data-testid='settings-page'>
             <h2>
                 Settings
             </h2>

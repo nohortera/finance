@@ -1,6 +1,6 @@
 import React from 'react';
 import {useDispatch, useSelector} from "react-redux";
-import {updateInterval} from "../../../../store/slices/intervalSlice";
+import {updateInterval} from "../../../../store/slices/interval/intervalSlice";
 import './IntervalButton.css'
 
 const IntervalButton = ({ ms }) => {
@@ -15,6 +15,7 @@ const IntervalButton = ({ ms }) => {
         <button
             onClick={handleClick}
             className={ms === interval.ms ? 'interval-btn_selected' : 'interval-btn'}
+            data-testid='interval-btn'
         >
             {ms / 1000}s
         </button>

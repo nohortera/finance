@@ -1,29 +1,23 @@
 import {createSlice} from "@reduxjs/toolkit";
-import {mockedTickers} from "../../mocks/tickers.mock";
-
-
+import {mockedTickers} from "../../../mocks/tickers.mock";
 
 const initialState = {
     data: [mockedTickers.map(el => ({...el, increased: true}))],
     settings: mockedTickers.map(el => ({title: el.ticker, show: true}))
 }
 
-
-
-const tickersSlice = createSlice({
+export const tickersSlice = createSlice({
     name: 'tickers',
     initialState,
     reducers: {
-        updateCurrent: (state, action) => {
-            const newTicker = action.payload.map((el, i) => {
-                const increased = el.price > state.data[0][i].price
-                return {...el, increased}
+        updateTickersData: (state, action) => {
+            const newTicker = action.payload.map(item => {
+                const increased = item.price > state.data[0].find(el => el.ticker === item.ticker).price
+                return {...item, increased}
             })
             state.data.unshift(newTicker)
         },
-        changeSettings: (state, action) => {
-            // const index = state.settings.findIndex(el => el.title === action.payload)
-            // state.settings[index].show = !state.settings[index].show
+        updateSettings: (state, action) => {
             state.settings.map(el => {
                 if (el.title !== action.payload) {
                     return el
@@ -35,5 +29,5 @@ const tickersSlice = createSlice({
     }
 })
 
-export const {updateCurrent, changeSettings} = tickersSlice.actions
+export const {updateTickersData, updateSettings} = tickersSlice.actions
 export default tickersSlice.reducer

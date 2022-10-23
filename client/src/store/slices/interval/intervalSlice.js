@@ -5,7 +5,7 @@ const initialState = {
     ms: 5000,
 }
 
-const intervalSlice = createSlice({
+export const intervalSlice = createSlice({
     name: 'interval',
     initialState,
     reducers: {

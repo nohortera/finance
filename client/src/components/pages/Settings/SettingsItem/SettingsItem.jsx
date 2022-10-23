@@ -1,14 +1,14 @@
 import React from 'react';
 import './SettingsItem.css'
 import {useDispatch} from "react-redux";
-import {changeSettings} from "../../../../store/slices/tickersSlice";
+import {updateSettings} from "../../../../store/slices/tickers/tickersSlice";
 import fullNameHelper from "../../../../helpers/fullName.helper";
 
 const SettingsItem = ({ ticker }) => {
     const dispatch = useDispatch()
 
     const handleChange = () => {
-        dispatch(changeSettings(ticker.title))
+        dispatch(updateSettings(ticker.title))
     }
 
     return (
@@ -27,6 +27,7 @@ const SettingsItem = ({ ticker }) => {
                     onChange={handleChange}
                 />
                 <label
+                    data-testid='settings-label'
                     htmlFor={ticker.title}
                     className="lb1"
                 />

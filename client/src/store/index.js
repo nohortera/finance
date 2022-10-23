@@ -1,15 +1,16 @@
 import {combineReducers, configureStore} from "@reduxjs/toolkit";
-import tickersReducer from "./slices/tickersSlice";
-import intervalReducer from "./slices/intervalSlice";
+import tickersReducer from "./slices/tickers/tickersSlice";
+import intervalReducer from "./slices/interval/intervalSlice";
 
 const rootReducer = combineReducers({
     tickers: tickersReducer,
     interval: intervalReducer
 })
 
-export const setupStore = () => {
+export const setupStore = (initialState) => {
     return configureStore({
         reducer: rootReducer,
+        preloadedState: initialState
     })
 }
 

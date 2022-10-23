@@ -57,6 +57,7 @@ function trackTickers(socket, interval) {
 
   socket.on('disconnect', function() {
     clearInterval(timer);
+    console.log('disconnected');
   });
 }
 

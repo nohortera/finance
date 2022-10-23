@@ -13,7 +13,7 @@ const Main = () => {
     const intervals = [1000, 5000, 15000, 30000]
 
     return (
-        <div className='main-wrapper' data-testid='main'>
+        <div className='main-wrapper' data-testid='main-page'>
             <div className="table-wrapper">
                 <h2>Dashboard</h2>
                 <table data-testid='table'>
