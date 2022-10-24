@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid #e8eaed;
+    border-top: 1px solid #e8eaed;
 }
 
 .lb1 {

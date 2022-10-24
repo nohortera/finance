@@ -7,3 +7,9 @@
     box-shadow: #e8eaed 0 2px 10px;
     margin: 50px auto;
 }
+
+.settings-title {
+    font-weight: 400;
+    margin: 0 0 20px;
+    text-align: center;
+}

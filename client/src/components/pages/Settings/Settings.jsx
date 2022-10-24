@@ -8,7 +8,7 @@ const Settings = () => {
 
     return (
         <div className='settings-wrapper' data-testid='settings-page'>
-            <h2>
+            <h2 className='settings-title'>
                 Settings
             </h2>
             <div className="settings-items">
