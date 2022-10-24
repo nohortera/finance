@@ -10,13 +10,14 @@ const chartConfig = (name, tickers) => {
         labels,
         datasets: [
             {
+                type: 'bar',
                 label: 'change',
                 data: filteredData.map(el => el.change),
                 backgroundColor: colors,
                 borderColor: colors,
-                type: 'bar'
             },
             {
+                type: 'line',
                 label: 'price',
                 data: filteredData.map(el => el.price),
                 backgroundColor: 'rgb(148, 0, 211)',
@@ -25,25 +26,7 @@ const chartConfig = (name, tickers) => {
         ]
     }
 
-    const config = {
-        type: 'line',
-        data: data,
-        options: {
-            plugins: {
-                title: {
-                    display: true,
-                    text: name
-                }
-            },
-            scales: {
-                y: {
-                    stacked: true
-                }
-            }
-        },
-    };
-
-    return config
+    return data
 }
 
 export default chartConfig
