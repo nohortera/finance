@@ -28,13 +28,13 @@ const TableRow = ({ ticker }) => {
                     </p>
                 </div>
             </td>
-            <td className='price-cell'>
+            <td className='price-cell' data-testid='price-cell'>
                 {ticker.price} $
             </td>
-            <td className={ticker.increased ? 'green' : 'red'}>
+            <td className={ticker.increased ? 'green' : 'red'} data-testid='change-cell'>
                 {ticker.increased ? '+' : '-'}{ticker.change} $
             </td>
-            <td className='percent-cell'>
+            <td className='percent-cell' data-testid='percent-cell'>
                 <div className={setClass()}>
                     {
                         ticker.increased

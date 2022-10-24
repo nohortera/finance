@@ -15,7 +15,7 @@ const Main = () => {
     return (
         <div className='main-wrapper' data-testid='main-page'>
             <div className="table-wrapper">
-                <h2>Dashboard</h2>
+                <h2 className='table-title'>Dashboard</h2>
                 <table data-testid='table'>
                     <tbody>
                     {/*I use index for key prop just as an example.

@@ -1,6 +1,12 @@
 
 # React Test Task
 
+Additional functionality implemented:
+- visual effects to highlight positive or negative changes in the prices
+- the possibility to switch on/off tickers by user
+- the possibility to specify interval time by user
+- chart of the selected ticker
+
 ## Requirements
 
 We need you to implement a solution to display price tickers data on the UI in realtime.

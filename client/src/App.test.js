@@ -3,9 +3,7 @@ import App from './App';
 import {Provider} from "react-redux";
 import {setupStore} from "./store";
 import SocketMock from 'socket.io-mock'
-import {renderSetup} from "./tests/helpers/renderSetup.helper";
 import userEvent from "@testing-library/user-event";
-import {MemoryRouter} from "react-router-dom";
 import {renderWithProvider} from "./tests/helpers/renderWithProvider.helper";
 
 describe('App test', () => {
