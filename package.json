@@ -1,5 +1,32 @@
 {
   "dependencies": {
+    "cross-env": "^7.0.3",
     "react-chartjs-2": "^4.3.1"
-  }
+  },
+  "name": "finance-app",
+  "description": "Additional functionality implemented: - visual effects to highlight positive or negative changes in the prices - the possibility to switch on/off tickers by user - the possibility to specify interval time by user - chart of the selected ticker",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nohortera/finance.git"
+  },
+  "keywords": [
+    "react",
+    "redux-toolkit",
+    "node.js",
+    "socket.io",
+    "react-testing-library",
+    "jest",
+    "chart.js"
+  ],
+  "author": "Maksym Sukach maxsukach.dev@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nohortera/finance/issues"
+  },
+  "homepage": "https://github.com/nohortera/finance#readme"
 }

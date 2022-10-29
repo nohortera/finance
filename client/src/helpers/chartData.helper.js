@@ -1,4 +1,4 @@
-const chartConfig = (name, tickers) => {
+const chartData = (name, tickers) => {
     const filteredData = tickers.map(el => el.find(set => set.ticker === name)).reverse()
     const labels = filteredData.map(el => {
         return new Date(el.last_trade_time).toLocaleTimeString()
@@ -11,14 +11,14 @@ const chartConfig = (name, tickers) => {
         datasets: [
             {
                 type: 'bar',
-                label: 'change',
+                label: 'Change',
                 data: filteredData.map(el => el.change),
                 backgroundColor: colors,
                 borderColor: colors,
             },
             {
                 type: 'line',
-                label: 'price',
+                label: 'Price',
                 data: filteredData.map(el => el.price),
                 backgroundColor: 'rgb(148, 0, 211)',
                 borderColor: 'rgb(148, 0, 211)',
@@ -29,4 +29,4 @@ const chartConfig = (name, tickers) => {
     return data
 }
 
-export default chartConfig
+export default chartData

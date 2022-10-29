@@ -3,6 +3,7 @@ const express = require('express');
 const http = require('http');
 const io = require('socket.io');
 const cors = require('cors');
+const path = require("path");
 
 const FETCH_INTERVAL = 5000;
 const PORT = process.env.PORT || 4000;
@@ -83,6 +84,14 @@ socketServer.on('connection', (socket) => {
     trackTickers(socket, interval);
   });
 });
+
+if (process.env.NODE_ENV === 'production') {
+  app.use('/', express.static(path.join(__dirname, 'client', 'build')))
+
+  app.get('*', (req, res) => {
+    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'))
+  })
+}
 
 server.listen(PORT, () => {
   console.log(`Streaming service is running on http://localhost:${PORT}`);
