@@ -72,10 +72,6 @@ const socketServer = io(server, {
   }
 });
 
-app.get('/', function(req, res) {
-  res.sendFile(__dirname + '/index.html');
-});
-
 socketServer.on('connection', (socket) => {
   socket.on('start', (interval) => {
     if (!interval) {
@@ -86,10 +82,10 @@ socketServer.on('connection', (socket) => {
 });
 
 if (process.env.NODE_ENV === 'production') {
-  app.use('/', express.static(path.join(__dirname, 'client', 'build')))
+  app.use('/', express.static(path.join(__dirname, '../client', 'build')))
 
   app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'))
+    res.sendFile(path.resolve(__dirname, '../client', 'build', 'index.html'))
   })
 }
 

@@ -8,7 +8,11 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "preinstall": "npm run client:install && npm run client:build && npm run server:install",
+    "start": "cross-env NODE_ENV=production npm start --prefix server",
+    "server:install": "npm install --prefix server",
+    "client:install": "npm install --prefix client",
+    "client:build": "npm run build --prefix client"
   },
   "repository": {
     "type": "git",
