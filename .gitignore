@@ -5,3 +5,5 @@ package-lock.json
 .server/package-lock.json
 
 .DS_Store
+
+/node_modules

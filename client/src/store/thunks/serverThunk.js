@@ -1,7 +1,7 @@
 import io from 'socket.io-client'
 import {updateTickersData} from "../slices/tickers/tickersSlice";
 
-const socket = io('http://localhost:4000')
+const socket = io('/')
 socket.on('error', (error) => {
     console.log(error)
 })
