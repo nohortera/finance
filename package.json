@@ -6,6 +6,10 @@
   "name": "finance-app",
   "description": "Additional functionality implemented: - visual effects to highlight positive or negative changes in the prices - the possibility to switch on/off tickers by user - the possibility to specify interval time by user - chart of the selected ticker",
   "version": "1.0.0",
+  "engines": {
+    "node": "16.16.0",
+    "npm": "8.11.0"
+  },
   "main": "index.js",
   "scripts": {
     "preinstall": "npm run client:install && npm run client:build && npm run server:install",
